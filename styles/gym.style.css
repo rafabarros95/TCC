@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Poppins:wght@300&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Domine', serif;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-image: url('../images/Gym.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.new_gym .logo {
+    margin-top: -60px;
+}
+
+.new_gym {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 440px;
+    height: 400px; 
+    background-color: rgba(255, 255, 255, 0.74);
+    color: #07777E; 
+    border-radius: 15px;
+    padding: 60px 40px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.425);
+}
+
+.new_gym h1 {
+    color:black;
+    font-size: 28px;
+    margin-top: -50px;
+}
+
+.new_gym .input-box{
+    margin-bottom: -7px;
+    
+}
+
+.new_gym .input-box input  {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-top: 27px;
+}
+
+.new_gym fieldset {
+     position:relative; 
+    border: 1px solid #07777E;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);  /* adjusting the fieldset box in the middle */ 
+    border-radius: 10px;
+    margin-top: 27px;
+}
+
+.new_gym fieldset div {
+    align-items: center;
+}
+
+.new_gym button {
+    margin-top: 27px;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 16px;
+    border: none; 
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.767);
+    background-color: #07777E;
+    color: #fff;
+}
+
+.new_gym fieldset h3 {
+    color: black;
+}
+
+/* Targeting the fieldset box options  */
+.new_gym fieldset div {
+    color: black;
+}
+
+.new_gym a {
+    text-decoration: none;
+    color: white;
+}
+
+.new_gym button:hover {
+    background-color:#08929c;
+    cursor: pointer;
+}
+
+.new_gym input::placeholder {
+    color: black;
+     
+}
+
+
+

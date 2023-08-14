@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Poppins:wght@300&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Domine', serif;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-image: url('../images/Yoga.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Field in middle position */
+.registration {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 640px;
+    height: 600px; 
+    background-color: rgba(255, 255, 255, 0.74);
+    color: #07777E; 
+    border-radius: 15px;
+    padding: 60px 40px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.425); 
+    
+}
+
+
+.registration h1 {
+    color:black;
+    font-size: 28px;
+    margin-top: -50px;
+    
+}
+
+.registration .top {
+    margin-top: -60px;
+}
+
+/* Targeting input field box */
+
+.input-form  .name input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+    margin-top: 27px;
+} 
+
+.input-form .email input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+}
+
+.input-form .phone input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+}
+
+.input-form .date-birth input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+}
+
+.input-form fieldset div {
+    width: 40%;
+    height: 100%;
+    background: transparent; 
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    color: white;
+    margin-bottom: 8px;
+}
+
+.input-form fieldset .gender {
+    color:black;
+    display: inline-block;
+    text-align: center;
+    
+    
+}
+
+.input-form fieldset .adm {
+    color:black;
+    display: inline-block;
+    text-align: center;
+    
+    
+}
+
+.input-form fieldset  h3 {
+    color: black;
+}
+
+fieldset {
+    border: 0px;
+}
+
+.input-form input::placeholder {
+    color: black;
+    
+}
+
+.input-form .password input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+}
+
+.input-form .confirm-password input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 8px;
+}
+/* Config the Buttons */
+button {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.767);
+    background-color: #07777E;
+    color: #fff;
+}
+
+.input-form a {
+    text-decoration: none;
+    color: white;
+}
+
+.input-form button:hover {
+    background-color:#08929c;
+    cursor: pointer;
+}
+
+
+
+
+

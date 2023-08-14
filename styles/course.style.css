@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Poppins:wght@300&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Domine', serif;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-image: url('../images/Zumba.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.new-course {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 540px;
+    height: 450px; 
+    background-color: rgba(255, 255, 255, 0.74);
+    color: #07777E; 
+    border-radius: 15px;
+    padding: 60px 40px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.425);
+}
+
+
+.new-course h1 {
+    color:black;
+    font-size: 28px;
+    margin-top: -50px;
+    
+}
+
+.new-course .logo {
+    margin-top: -60px;
+}
+
+/* Targeting input field box */
+
+.input-form  input {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #088f99;
+    border-radius: 40px;
+    font-size: 14px; 
+    padding: 4px 44px 4px 14px; 
+    margin-bottom: 9px;
+    margin-top: 20px;
+}
+
+/* Adjusting the time boxes */
+.input-form .time input {
+    width: 20%;
+    padding-right: 24px;
+    margin-right: 19px;
+    margin-bottom: 19px;
+    margin-top: 10px;
+} 
+
+/* Rotating the input boxes from time until they arreached same position */
+.input-form .time  .from {
+    top: 4px;
+    left: 10%;
+    transform: translate(7%);
+
+} 
+
+.input-form .time  .to {
+    top: 4px;
+    left: 10%;
+    transform: translate(14%);
+    
+    
+} 
+
+.input-form span {
+    color: black;
+}
+
+.input-form input::placeholder {
+    color: black;
+    
+}
+
+button {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.767);
+    background-color: #07777E;
+    color: #fff;
+}
+
+.input-form a {
+    text-decoration: none;
+    color: white;
+}
+
+/* what it happens when the pointer hover over the button */
+
+.input-form button:hover {
+    background-color:#08929c;
+    cursor: pointer;
+}

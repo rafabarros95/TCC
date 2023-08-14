@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./styles/registration.style.css">
+    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="registration">
+            <div class="top">
+                <img src="./images/FlexFit_Logo.png" alt="" style="width: 210px; height: 210px;">
+            </div> 
+            <h1>Create your Account</h1>
+            <form action="#" method="post">
+                <div class="input-form">
+                
+                    <div class="name">
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="email">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="phone">
+                        <label for="phone"></label>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="date-birth">
+                        <label for="date-birth"></label>
+                        <input type="date" style="color: black;" name="date-birth" id="date-birth" required>
+                    </div>
+                    <!-- Gender Fieldset radio -->
+                    <fieldset>
+                        <h3>Gender</h3>
+                        <div class="gender">
+                        <input type="radio" id="male" name="gender" value="Male" />
+                        <label for="male">Male</label>
+                    
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label for="female">Female</label>
+                    
+                        <input type="radio" id="diverse" name="gender" value="diverse" />
+                        <label for="diverse">Diverse</label>
+
+                        </div>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <h3>Administrator</h3>
+                            <div class="adm">
+                                <label for="yes">Yes</label>
+                                <input type="radio" name="yes/no" id="yes">
+                                
+                                <label for="no">No</label>
+                                <input type="radio" name="yes/no" id="no">
+
+                            </div>
+                        </fieldset>
+
+                        <div class="password">
+                            <label for="password"></label>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                        </div> 
+                        <div class="confirm-password">
+                            <label for="confirm-password"></label>
+                            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+                        </div> 
+                        <button type="button"><a href="index.html">Cancel</a></button>
+                        <button type="submit">Create account</button>
+                </div>
+           </form>
+        </div>
+    </section>
+</body>
+</html>
