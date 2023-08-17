@@ -49,7 +49,11 @@ body {
    
 }
 /* FlexFit estilizado */
-.login h2>strong {
+.login h2 strong {
+    color: black;
+}
+
+.login h2 span {
     color: #07777E;
 }
 
