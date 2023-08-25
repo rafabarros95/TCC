@@ -145,14 +145,41 @@ main .fotos img {
 
 /* Aside section - Contact Infos */
 
+aside {
+    margin-bottom: 60px;
+}
+
+aside .contact-items{
+   display: flex;
+   justify-content: center;
+   gap: 100px;
+}
+
+
 aside .contact-container h1 {
    color: #fff;
    font-size: 20px;
+   text-align: center;
+   
 }
 
 aside .contact-container h2 {
    color: #fff;
    font-size: 16px;
+   text-align: center;
+}
+
+aside .contact-container h3 {
+   color: #0bccda;
+   font-size: 14px;
+   background-color: black;
+   border-radius: 20px;
+   width: 150px;
+   text-align: center;
+}
+
+aside .contact-container .icon {
+   text-align: center;
 }
 
 /* End Aside section - Contact Infos */
