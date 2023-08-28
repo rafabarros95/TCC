@@ -63,8 +63,9 @@ body {
 main {
     width: 100%;
     height: 800px;
-    padding-top: 100px;
-    margin-top: 80px;  
+    padding-top: 80px;
+    margin-top: 80px; 
+    
 }
 
 .search-section {
@@ -140,7 +141,6 @@ main .fotos {
 
 main .fotos img {
     width: 250px;
-     
 }
 
 /* Aside section - Contact Infos */
