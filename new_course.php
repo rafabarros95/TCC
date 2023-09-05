@@ -45,7 +45,7 @@
                     </div>
                         
                          <button type="button">
-                            <a href="index.html">Cancel
+                            <a href="index.php">Cancel
                             </a>
                         </button>
                         <button type="submit">Add course</button>

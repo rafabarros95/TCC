@@ -1,3 +1,37 @@
+<?php 
+
+require 'config.php';
+
+/* getting data from the registration form */
+
+if(isset($_POST["submit"])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+    $date_birth = $_POST['date_birth'];
+    $gender = $_POST['gender'];
+    $administrator = $_POST['yes_no'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+    $duplicate = mysqli_query($conn, "SELECT * FROM usuario WHERE name = '$name' OR email = '$email'");
+
+    if(mysqli_num_rows($duplicate) > 0){
+        echo
+        "<script> alert('Username or Email has already taken'); </script>";
+    } else {
+        if($password == $confirm_password){
+            $query = "INSERT INTO usuario VALUES ('', '$name', '$email', '$phone_number', '$date_birth', '$gender', '$administrator', '$password')";
+
+            mysqli_query($conn,$query);
+            echo "<script> Registration Successful </script>";
+        } else {
+            echo "<script> alert('Password does not match') </script>";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +48,7 @@
                 <img src="./images/FlexFit_Logo.png" alt="" style="width: 210px; height: 210px;">
             </div> 
             <h1>Create your Account</h1>
-            <form action="connect.php" method="post">
+            <form action="#" method="post">
                 <div class="input-form">
                 
                     <div class="name">
@@ -48,18 +82,6 @@
 
                         </div>
                         </fieldset>
-                    
-                        <fieldset>
-                            <h3>Administrator</h3>
-                            <div class="adm">
-                                <label for="yes">Yes</label>
-                                <input type="radio" name="yes_no" id="yes">
-                                
-                                <label for="no">No</label>
-                                <input type="radio" name="yes_no" id="no">
-
-                            </div>
-                        </fieldset>
 
                         <div class="password">
                             <label for="password"></label>
@@ -69,8 +91,8 @@
                             <label for="confirm_password"></label>
                             <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
                         </div> 
-                        <button type="button"><a href="index.html">Cancel</a></button>
-                        <button type="submit">Create account</button>
+                        <button type="button"><a href="index.php">Cancel</a></button>
+                        <button type="submit" name="submit">Create account</button>
                 </div>
            </form>
         </div>

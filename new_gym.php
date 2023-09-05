@@ -40,8 +40,8 @@
                     </div>
           </fieldset>
           
-          <button><a href="index.html">Cancel</a></button>
-          <button class="btn" type="submit">Add Gym</button>
+          <button><a href="index.php">Cancel</a></button>
+          <button class="btn" type="submit" name="submit">Add Gym</button>
   
         </form>
       </div>

@@ -13,9 +13,9 @@
         <a href="#" class="logo"><span>Flex</span>Fit</a>
 
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About us</a>
-            <a href="registration.html">Sign up</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About us</a>
+            <a href="registration.php">Sign up</a>
             <a href="login.html">Login</a>
         </nav>
     </header>
@@ -78,8 +78,5 @@
         <p>Site developed by <a href="https://github.com/rafabarros95" target="_blank"><span>Rafa Barros</span></a></p>
     </footer>
 
-   
-        
-   
 </body>
 </html>
