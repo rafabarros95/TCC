@@ -1,57 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Course</title>
-    <link rel="stylesheet" href="./styles/course.style.css">
-    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
-</head>
-<body>
-    <section>
-        <div class="new-course">
-            <div class="logo">
-                <img src="./images/FlexFit_Logo.png" alt="" style="width: 210px; height: 210px;">
-            </div> 
-            <h1>Register Course</h1>
-            <form action="#" method="post">
-                <div class="input-form">
-                
-                    <div class="name">
-                        <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                    </div>
-                    <div class="description">
-                        <label for="email"></label>
-                        <input type="text" name="description" id="description" placeholder="Description" required>
-                    </div>
-                    <div class="vacancy">
-                        <label for="vacancy"></label>
-                        <input type="number" name="vacancy" id="vacancy" placeholder="Number of Vacancies" min="1" required>
-                    </div>
-                    <div class="time">
-                        <label for="time-from"></label>
-                        <label for="time-to"></label>
+<?php 
+require ("config.php");
 
-                        <span>from</span>
 
-                        <input class="from" type="time" name="time-from" id="time-from" required>
+/* Checking connection and preparing stmt */
 
-                        <br>
+    if($conn->connect_error){
+       die ("Unable to connect to db");
+    } else {
+    
+       /* Data from form submitted */
+       $name = $_POST['name'];
+       $description = $_POST['description'];
+       $vacancies = $_POST['vacancies'];
+       $time_from = $_POST['time-from'];
+       $time_to = $_POST['time-to'];
 
-                        <span>to</span>
+       $query = "INSERT INTO `course`( `name`, `description`, `vacancies`, `time_from`, `time_to`) VALUES ('$name','$description','$vacancies','$time_from','$time_to')";
 
-                        <input class="to" type="time" name="time-to" id="time-to" required>
-                    </div>
-                        
-                         <button type="button">
-                            <a href="index.php">Cancel
-                            </a>
-                        </button>
-                        <button type="submit">Add course</button>
-                </div>
-           </form>
-        </div>
-    </section>
-</body>
-</html>
+       $result = mysqli_query($conn,$query);
+
+    if($result){
+        
+        echo "Course inserted successfully";
+        //header("location:adm.php");
+    
+    } else {
+        echo "New course not inserted";
+    }
+
+    
+    mysqli_close($conn);
+}
+?>

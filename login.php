@@ -23,7 +23,7 @@
 
       } elseif (($data['password'] === $password && $data['email'] === $email && $data['usertype'] === 'user')) {
          
-        header("location:index.php");
+        header("location:user.php");
         
       } else {
         echo "<script> alert('Invalid Email or Password')</script>";

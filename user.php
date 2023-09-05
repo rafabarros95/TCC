@@ -1,4 +1,5 @@
-<!--  Adm section -->
+
+<!-- user section -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +16,15 @@
         <a href="#" class="logo"><span>Flex</span>Fit</a>
 
         <nav class="navbar">
-            <a href="index.php">Home</a>
-            <a href="new_course.php">Add course</a>
-            <a href="new_gym.html">Add gym</a>
+            <a href="main.html">Home</a>
+            <a href="about.php">About</a>
+            <a href="reservation.php">My Reservation</a>
             <a href="logout.php">Logout</a>
         </nav>
     </header>
     <main>
-       <!-- consulting data from database -->
+        
+        
     </main>
     <aside>
         <div class="contact-container">
