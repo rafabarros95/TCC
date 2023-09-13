@@ -15,8 +15,9 @@
         <a href="#" class="logo"><span>Flex</span>Fit</a>
 
         <nav class="navbar">
-            <a href="index.php">Home</a>
-            <a href="new_course.php">Add course</a>
+            <a href="adm.php">Home</a>
+            <a href="users_table.php">Users</a>
+            <a href="new_course.html">Add course</a>
             <a href="new_gym.html">Add gym</a>
             <a href="logout.php">Logout</a>
         </nav>

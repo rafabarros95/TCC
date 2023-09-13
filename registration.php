@@ -28,11 +28,15 @@ require ("config.php");
           /* if everything works fine, the query is inserted and no errors have occured */
         if($result){
             
-            echo " New member registered successfully";
+            echo " <script> alert('New member registered successfully')</script>";
+
+            echo '<script>window.location = "login.html"</script>';
             //header("location:adm.php");
         
         } else {
-            echo "Registration not successful";
+          echo "<script> alert('Registration not successful. Try again')</script>";
+
+            echo '<script>window.location = "ragistration.html"</script>';
         }
 
         /* mysqli_free_result($result); */
@@ -41,6 +45,8 @@ require ("config.php");
        } else {
 
         echo "<script> alert('Password does not match. Try again')</script>";
+
+        echo '<script>window.location = "registration.html"</script>';
        }
       
 }

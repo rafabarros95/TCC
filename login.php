@@ -26,11 +26,15 @@
         header("location:user.php");
         
       } else {
-        echo "<script> alert('Invalid Email or Password')</script>";
+        echo "<script> alert('Invalid Email or Password, Try again!')</script>";
+        
+        echo '<script>window.location = "login.html"</script>';
         
       }
     } else {
-      echo "<script> alert('Invalid Email or Password')</script>";
+      echo "<script> alert('Invalid Email or Password, Try again!')</script>";
+
+      echo '<script>window.location = "login.html"</script>';
       
     }
   } 

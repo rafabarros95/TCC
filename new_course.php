@@ -1,5 +1,5 @@
 <?php 
-require ("config.php");
+require_once ("config.php");
 
 
 /* Checking connection and preparing stmt */
@@ -10,18 +10,22 @@ require ("config.php");
     
        /* Data from form submitted */
        $name = $_POST['name'];
+       $gym = $_POST['gym'];
        $description = $_POST['description'];
        $vacancies = $_POST['vacancies'];
+       $price = $_POST['price'];
        $time_from = $_POST['time-from'];
        $time_to = $_POST['time-to'];
 
-       $query = "INSERT INTO `course`( `name`, `description`, `vacancies`, `time_from`, `time_to`) VALUES ('$name','$description','$vacancies','$time_from','$time_to')";
+       $query = "INSERT INTO `course`( `name`,`gym`, `description`, `vacancies`,`price`, `time_from`, `time_to`) VALUES ('$name','$gym','$description','$vacancies','$price','$time_from','$time_to')";
 
        $result = mysqli_query($conn,$query);
 
     if($result){
         
-        echo "Course inserted successfully";
+        echo "<script> alert('Course saved successfully')</script>";
+
+        echo '<script>window.location = "adm.php"</script>';
         //header("location:adm.php");
     
     } else {
@@ -32,3 +36,7 @@ require ("config.php");
     mysqli_close($conn);
 }
 ?>
+
+
+
+

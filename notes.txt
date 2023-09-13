@@ -1,0 +1,19 @@
+ /* if($conn->connect_error){
+        die ("Unable to connect to db");
+    } else {
+        $course = $_POST['search'];
+
+        $sql = "SELECT `id`,`gym`,`name`, `time_from`, `time_to`,`price`, `vacancies` FROM `course` WHERE name='$course'";
+        $result = $conn -> query($sql);
+            if($result->num_rows>0){
+                while($row = $result->fetch_assoc()){
+                    echo "<tr><td>". $row["id"] . "<td>" . $row["gym"]. "<td>" . $row["name"] . "<td>"  . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["vacancies"] . "</td></tr>";
+                            }
+            
+                    }
+                        else {
+                            echo "0 result";
+                        }
+                    }
+                        $conn ->close(); */
+                    ?> 

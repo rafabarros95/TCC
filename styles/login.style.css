@@ -152,6 +152,12 @@ body {
     text-decoration: underline;
     
 }
+/* home link at the botton of the login page */
+.login .new-user .home a  {
+    color: #07777E;
+    text-decoration: underline;
+
+}
  
 form  .btn:hover {
     background-color:#08929c;

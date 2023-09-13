@@ -39,7 +39,7 @@ body {
 
 .logo {
    color: black;
-   font-size: 25px;
+   font-size: 20px;
    text-decoration: none;
    font-weight: 600;
    cursor: default;  
@@ -200,3 +200,4 @@ footer span {
 footer span:hover {
     text-decoration: underline;
 }
+
