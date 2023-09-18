@@ -68,7 +68,7 @@ $result = mysqli_query($conn,$query);
                     <td><?php echo $row['time_to'];?></td>
                     <td><?php echo $row['price'];?></td>
                     <td><?php echo $row['vacancies'];?></td>
-                    <td><a href="#">Book</a></td>
+                    <td><a href="login.html">Book</a></td>
                     </tr>
                     <?php 
                         }

@@ -1,6 +1,12 @@
 
 <!-- user section -->
 
+<?php 
+require_once("config.php");
+$query = "SELECT * FROM `course`";
+$result = mysqli_query($conn,$query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +16,24 @@
     <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/main.style.css">
+    <link rel="stylesheet" href="./styles/main_search.style.css">
+    <!-- styling form, table, email confirmation localy -->
+    <style>
+      main table td a {
+            text-decoration: none;
+            color: #07777E;
+            border: none;
+            font-size: 16px;
+            background-color: transparent;
+            text-align: center; 
+        }
+
+        td a:hover { 
+            text-decoration: underline;
+        }
+        
+    </style>
+
 </head>
 <body>
     <header class="header">
@@ -23,7 +47,39 @@
         </nav>
     </header>
     <main>
+      
+    <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>Gym</th>
+                        <th>Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Price(€)</th>
+                        <th>Vacancies</th>
+                        <th>Reservation</th>
         
+                    </tr>
+                    <tr>
+                    <?php
+
+                        while($row=mysqli_fetch_assoc($result)){
+                    ?>
+                    <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['gym'];?></td>
+                    <td><?php echo $row['name'];?></td>
+                    <td><?php echo $row['time_from'];?></td>
+                    <td><?php echo $row['time_to'];?></td>
+                    <td><?php echo $row['price'];?></td>
+                    <td><?php echo $row['vacancies'];?></td>
+                    <!-- <td><button type="submit" name="submit">Book</button></td> -->
+                    <td><a href="reservation.php">Book</a></td>
+                    </tr> 
+                    <?php 
+                        }
+                    ?>
+                        
+        </table>
         
     </main>
     <aside>
