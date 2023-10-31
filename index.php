@@ -21,7 +21,7 @@
     </header>
     <main>
         <section class="search-section">
-            <form action="#" method="post">
+            <form action="main.php" method="post">
                 
                 <input type="text" name="search" id="search" placeholder="Search a course you'd like to do" required>
                 <label for="search"></label>

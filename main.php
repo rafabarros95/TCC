@@ -29,6 +29,9 @@ $result = mysqli_query($conn,$query);
             text-decoration: underline;
             
         }
+        main {
+            border: none;
+        }
 
     </style>
 </head>

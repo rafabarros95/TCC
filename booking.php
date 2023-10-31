@@ -16,7 +16,9 @@ require_once("config.php");
      <!-- email and booking - local configuration  -->
 
      <style>
-
+        main {
+          border: none; /* removing red border */
+        }
         main form {
           float: left;
         }
@@ -87,35 +89,50 @@ require_once("config.php");
         </nav>
     </header>
     <main>
-        <table class="show">
-          <thead>
-            <tr>
-              <th>Gym</th>
-              <th>Name</th>
-              <th>From</th>
-              <th>To</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><?php ?></td>
-              <td><?php ?></td>
-              <td><?php ?></td>
-              <td><?php ?></td>
-              <td><?php ?></td>
-            </tr>
-          </tbody>
-        </table>
-        <script>
-          function reservation(){
-            document.myform.action = '/reservation.php';
-            var gym = document.getElementById("gym");
-            
-          }
-        </script>
-          
+          <h1>Courses Available:</h1>
 
+          <?php
+          
+          $query = "SELECT * FROM `course`,`registration` WHERE usertype ='user'";
+
+          $result = mysqli_query($conn, $query);
+
+          if(mysqli_num_rows($result)>0){
+             
+            foreach($result as $row)
+            {
+
+              ?>
+
+              
+            <form action="send_email.php" method="post">
+
+                <label for="gym"></label>
+                <input type="text" name="gym" id="gym" placeholder="Gym" value="<?php echo $row['gym'] ?>"> <br><br>
+
+                <label for="name"></label>
+                <input type="text" name="name" id="name"  value="<?php echo $row['name'] ?>"> <br><br>
+
+                <label for="time_from"></label>
+                <input type="text" name="time_from" id="time_from"  value="<?php echo $row['time_from'] ?>"> <br><br>
+
+                <label for="time_to"></label>
+                <input type="text" name="time_to" id="time_to"  value="<?php echo $row['time_to'] ?>"> <br><br>
+
+                <label for="price"></label>
+                <input type="text" name="price" id="price" value="<?php echo $row['price'] ?>€"> <br><br>
+
+                <label for="email"></label>
+                <input type="email" name="email" id="email" value="<?php echo $row['email'] ?>"> <br><br>
+
+
+                <button type="submit" name="send">Book course</button> 
+            </form>
+            <?php 
+
+             }
+          }
+          ?>
     </main>
 </body>
 </html>

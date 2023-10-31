@@ -19,7 +19,14 @@ $result = mysqli_query($conn,$query);
     <link rel="stylesheet" href="./styles/main_search.style.css">
     <!-- styling form, table, email confirmation localy -->
     <style>
-      main table td a {
+      .header {
+        position: relative;
+      }
+      main {
+        border: none;
+      }
+      main  table td a {
+           
             text-decoration: none;
             color: #07777E;
             border: none;
@@ -40,8 +47,9 @@ $result = mysqli_query($conn,$query);
         <a href="#" class="logo"><span>Flex</span>Fit</a>
 
         <nav class="navbar">
-            <a href="main.html">Home</a>
-            <a href="about.php">About</a>
+            <a href="user.php">Home</a>
+            <a href="about.user.php">About</a>
+            <a href="booking.php">Booking</a>
             <a href="reservation.php">My Reservation</a>
             <a href="logout.php">Logout</a>
         </nav>
@@ -49,7 +57,9 @@ $result = mysqli_query($conn,$query);
     <main>
       
     <table>
-                    <tr>
+    
+                   <thead>
+                     <tr>
                         <th>Id</th>
                         <th>Gym</th>
                         <th>Name</th>
@@ -59,8 +69,10 @@ $result = mysqli_query($conn,$query);
                         <th>Vacancies</th>
                         <th>Reservation</th>
         
-                    </tr>
-                    <tr>
+                     </tr>
+                   </thead>
+                   <tbody>
+                   
                     <?php
 
                         while($row=mysqli_fetch_assoc($result)){
@@ -72,12 +84,16 @@ $result = mysqli_query($conn,$query);
                     <td><?php echo $row['time_to'];?></td>
                     <td><?php echo $row['price'];?></td>
                     <td><?php echo $row['vacancies'];?></td>
-                    <!-- <td><button type="submit" name="submit">Book</button></td> -->
-                    <td><a href="reservation.php">Book</a></td>
-                    </tr> 
+                    
+                    <td><a href="booking.php">Book</a></td>
+
+                    </tr>  
+                    
                     <?php 
                         }
                     ?>
+                    
+                    </tbody> 
                         
         </table>
         

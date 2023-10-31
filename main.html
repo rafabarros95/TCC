@@ -7,6 +7,30 @@
     <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/main.style.css">
+    <style>
+      .header{
+        position: absolute;
+      }
+      main {
+        height: 900px;
+        border: none;
+      }
+      /* local changes in  courses` name */
+      .name_course {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .name_course p {
+        color: white;
+      }
+      .name_course  .first-img{
+        margin-left: 90px;
+      }
+      aside .contact-container{
+        margin-top: 50px;
+      }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -33,12 +57,26 @@
                 <img src="../TCC/images/Yoga.jpg" alt="Yoga">                    
                            
             </div>
-            
+            <!-- div container for naming the courses -->
+            <div class="name_course">
+              <!-- local class name for local changes to be done -->
+              <p class="first-img">Karatê</p>
+              <p>Zumba</p>
+              <p>Yoga</p>
+            </div>
+
             <div class="fotos">          
                 <img src="images/Tango.jpg" alt="Tango">           
                 <img src="images/Pilates.jpg" alt="Pilates">           
                 <img src="images/CrossFit.jpg" alt="CrossFit">           
                            
+            </div>
+            <!-- div container for naming the courses -->
+            <div class="name_course">
+              <!-- local class name for local changes to be done -->
+              <p class="first-img">Tango</p>
+              <p>Pilates</p>
+              <p>CrossFit</p>
             </div>
         </section>
         
