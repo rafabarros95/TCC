@@ -51,7 +51,14 @@ if(isset($_POST["reset-request-submit"])){
     $message .= '<p> Here is your password reset link: </p></br>';
     $message .= '<a href="' . $url . '">' . $url . '</a></p>';
 
-    $headers;
+    $headers = "From: FlexFit <rafaelr.barros956789@gmail.com>\r\n";
+    $headers .= "Reply-To: rafaelr.barros956789@gmail.com\r\n";
+    $headers .= "Content-Type: text/html\r\n";
+
+    mail($to, $subject, $message, $headers);
+
+    header("Location: reset-password.php?reset=success");
+
 
 } else {
     header("Location: login.html");
