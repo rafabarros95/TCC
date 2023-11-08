@@ -1,6 +1,6 @@
-<?php 
+ <?php 
 
-require ("config.php");
+ //require ("config.php");
 
 
 /* Checking connection and preparing stmt */
@@ -17,6 +17,8 @@ require ("config.php");
        $gender = $_POST['gender'];
        $password = $_POST['password'];
        $confirm_password = $_POST['confirm_password'];
+
+       /* $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); */
 
        if($password === $confirm_password){
 
@@ -49,5 +51,5 @@ require ("config.php");
         echo '<script>window.location = "registration.html"</script>';
        }
       
-}
-?>
+} 
+?> 

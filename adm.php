@@ -9,6 +9,19 @@
     <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/main.style.css">
+    <style>
+      .welcome {
+       
+        
+        border: 3px solid #07777E;
+        float: right;
+        margin-top: -160px;
+      }
+      main h1 {
+        font-size: 25px;
+        color: #fff;
+      }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -17,6 +30,8 @@
         <nav class="navbar">
             <a href="adm.php">Home</a>
             <a href="users_table.php">Users</a>
+            <a href="courses_table.php">Courses</a>
+            <a href="gyms.php">Gyms</a>
             <a href="about.adm.php">About us</a>
             <a href="new_course.html">Add course</a>
             <a href="new_gym.html">Add gym</a>
@@ -25,6 +40,9 @@
     </header>
     <main>
        <!-- consulting data from database -->
+       <div class="welcome">
+         <h1>Welcome back, Rafael.</h1>
+       </div>
     </main>
     <aside>
         <div class="contact-container">

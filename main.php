@@ -42,7 +42,7 @@ $result = mysqli_query($conn,$query);
             <nav class="navbar">
                 <a href="index.php">Home</a>
                 <a href="about.php">About us</a>
-                <a href="registration.php">Sign up</a>
+                <a href="process-signup.php">Sign up</a>
                 <a href="login.html">Login</a>
             </nav>
     </header> 

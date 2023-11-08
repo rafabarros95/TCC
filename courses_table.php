@@ -10,9 +10,14 @@ require_once("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users Data</title>
-    <link rel="stylesheet" href="./styles/users_table.style.css">
+    <title>Courses Data</title>
+    <link rel="stylesheet" href="./styles/courses_table.style.css">
     <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
+    <style>
+        main table {
+            width: 800px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -34,10 +39,11 @@ require_once("config.php");
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Number</th>
-                <th>Date_birth</th>
-                <th>Gender</th>
+                <th>Gym</th>
+                <th>Time_from</th>
+                <th>Time_to</th>
+                <th>Price</th>
+                <th>Vacancies</th>
                 
             </tr>
             
@@ -45,12 +51,12 @@ require_once("config.php");
             if($conn->connect_error){
                 die ("Unable to connect to db");
              } else {
-                $sql = "SELECT `id`, `name`, `email`, `phone_number`, `date_birth`, `gender` FROM `registration`";  
+                $sql = "SELECT `id`, `name`, `gym`, `time_from`, `time_to`, `price`, `vacancies` FROM `course`";  
                 $result = $conn -> query($sql);
 
                 if($result->num_rows>0){
                 while($row = $result->fetch_assoc()){
-                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["email"] . "<td>" . $row["phone_number"] . "<td>" . $row["date_birth"] . "<td>" . $row["gender"] . "</td></tr>";
+                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["gym"] . "<td>" . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["vacancies"]  . "</td></tr>";
                 }
                 
              }

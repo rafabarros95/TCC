@@ -41,5 +41,10 @@
        }
     }
 
-
- echo "Message sent, please check your email. Thanks for using FlexFit :)"; 
+    echo "
+    <script>
+    alert('Message sent, please check your email. Thanks for using FlexFit :)');
+    document.location.href = 'forgot-password.php';
+    </script>
+    ";
+ /* echo "Message sent, please check your email. Thanks for using FlexFit :)"; */ 
