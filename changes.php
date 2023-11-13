@@ -36,9 +36,9 @@
     </header>
     <main>
         <thead>
-            <th><a href="changes/user-edit.php">Edit user</a></th>
-            <th><a href="changes/gym-edit.php">Edit gym</a></th>
-            <th><a href="changes/course-edit.php">Edit course</a></th>
+            <th><a href="changes/changes-index.php">Edit user</a></th>
+            <th><a href="#">Edit gym</a></th>
+            <th><a href="#">Edit course</a></th>
         </thead>
     </main>
     <aside>

@@ -10,9 +10,55 @@ require_once("../config.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit user</title>
-    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/Favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../styles/main.style.css">
+    <link rel="stylesheet" href="../styles/users_table.style.css">
+    <style>
+        table thead th {
+            background-color: #07777E;
+        } 
+
+        table tbody tr th {
+             background-color: #fff; 
+             color: #07777E;
+        }
+
+        /* Edit button configuration */
+        #edit  {
+             border-radius: 15%;
+             width: 49px;
+             outline: none;
+             color: #fff;
+             background-color: #008000;
+             font-size: 18px;
+             padding: 4px 2px;
+             
+        }
+
+
+         #edit:hover {
+             color: #fff;
+             background-color: #32cd32;
+        }
+
+        /* Delete button configuration */
+        #delete {
+             border-radius: 15%;
+             width: 70px;
+             outline: none;
+             color: #fff; 
+             font-size: 18px;
+             padding: 4px 2px; 
+             background-color: red;
+        }
+
+        #delete:hover {
+             color: #fff;
+             background-color: #ff6347;
+        }
+        
+        
+    </style>
     
 </head>
 <body>
@@ -64,7 +110,12 @@ require_once("../config.php");
 
                                 <form action="user-update.php" method="post">
                                     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
-                                    <th><a href="">Edit</a></th>
+                                    <th><input type="submit" id="edit" name="edit" value="Edit"></th>
+                                </form>
+
+                                <form action="user-delete.php" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+                                    <th> <input type="submit" id="delete" name="delete" value="Delete"></th>
                                 </form>
                             </tr>
                         </tbody>
