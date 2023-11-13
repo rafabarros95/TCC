@@ -77,7 +77,7 @@
             <label for="password"></label>
             <input class="pwd" type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat password">
 
-            <button>Send</button>
+            <button>Update password</button>
 
       
         </form>

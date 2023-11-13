@@ -1,3 +1,4 @@
+
 <!--  Adm section -->
 
 <!DOCTYPE html>
@@ -29,21 +30,16 @@
 
         <nav class="navbar">
             <a href="adm.php">Home</a>
-            <a href="users_table.php">Users</a>
-            <a href="courses_table.php">Courses</a>
-            <a href="gyms.php">Gyms</a>
-            <a href="about.adm.php">About us</a>
-            <a href="new_course.html">Add course</a>
-            <a href="new_gym.html">Add gym</a>
-            <a href="changes.php">Changes</a>
-            <a href="logout.php">Logout</a>
+            
+            
         </nav>
     </header>
     <main>
-       <!-- consulting data from database -->
-       <div class="welcome">
-         <h1>Welcome back, Rafael.</h1>
-       </div>
+        <thead>
+            <th><a href="changes/user-edit.php">Edit user</a></th>
+            <th><a href="changes/gym-edit.php">Edit gym</a></th>
+            <th><a href="changes/course-edit.php">Edit course</a></th>
+        </thead>
     </main>
     <aside>
         <div class="contact-container">

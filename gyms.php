@@ -31,6 +31,7 @@ require_once("config.php");
                 <a href="about.adm.php">About us</a>
                 <a href="new_course.html">Add course</a>
                 <a href="new_gym.html">Add gym</a>
+                <a href="changes.php">Changes</a>
                 <a href="logout.php">Logout</a>
             </nav>
         </header>

@@ -35,10 +35,10 @@ if(strtotime($registration["reset_token_expires_at"]) <= time()) {
  $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); 
 
  $password = $_POST["password"];
- $confirm_password = $_POST["confirm_password"];
+ /* $confirm_password = $_POST["confirm_password"]; */
 
 
- $sql = "UPDATE registration SET password = '$password', confirm_password = '$confirm_password', password_hash = ?,
+ $sql = "UPDATE registration SET password = '$password', password_hash = ?,
 reset_token_hash = NULL, reset_token_expires_at = NULL WHERE id = ?";  
 
 

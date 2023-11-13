@@ -105,7 +105,7 @@ require_once("config.php");
               ?>
 
               
-            <form action="send_email.php" method="post">
+            <form action="send_email.php"  method="post">
 
                 <label for="gym"></label>
                 <input type="text" name="gym" id="gym" placeholder="Gym" value="<?php echo $row['gym'] ?>"> <br><br>
@@ -133,6 +133,7 @@ require_once("config.php");
              }
           }
           ?>
+          
     </main>
 </body>
 </html>

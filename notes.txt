@@ -17,3 +17,39 @@
                     }
                         $conn ->close(); */
                     ?> 
+
+-> Infos for edit user table <-
+
+<table>
+        <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gym</th>
+                <th>Time_from</th>
+                <th>Time_to</th>
+                <th>Price</th>
+                <th>Vacancies</th>
+                  
+            </tr>
+            
+            <?php 
+            if($conn->connect_error){
+                die ("Unable to connect to db");
+             } else {
+                $sql = "SELECT `id`, `name`, `gym`, `time_from`, `time_to`, `price`, `vacancies` FROM `course`";  
+                $result = $conn -> query($sql);
+
+                if($result->num_rows>0){
+                while($row = $result->fetch_assoc()){
+                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["gym"] . "<td>" . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["vacancies"]  . "</td></tr>";
+                }
+                
+             }
+             else {
+                echo "0 result";
+             }
+
+            }
+            $conn ->close();
+            ?>
+        </table>

@@ -44,10 +44,10 @@ if(isset($_POST["send"])){
 
     /* Sending the details to the customer by email */
 
-    $mail ->Body = 'Your Reservation was confirmed. The course costs ' . $_POST["price"] . ' . It goes from ' . $_POST["time_from"] . ' to ' . $_POST["time_to"] . ' at ' . $_POST["gym"] . '.  Please make sure you are there 5 min earlier for the payment procedure. Thanks for using Flexfit. Come back soon :)';
+    $mail ->Body = 'Your Reservation was confirmed. Mr/Mrs. ' .  $_POST["name"] .   ' your course  costs ' . $_POST["price"] . ' . It goes from ' . $_POST["time_from"] . ' to ' . $_POST["time_to"] . ' at ' . $_POST["gym"] . '.  Please make sure you are there 5 min earlier for the payment procedure. Thanks for using Flexfit. Come back soon :)';
 
     $mail ->send();
-
+ 
     echo
     "
     <script>
@@ -55,7 +55,5 @@ if(isset($_POST["send"])){
     document.location.href = 'user.php';
     </script>
     ";
-
-}
-
+ }
 ?>

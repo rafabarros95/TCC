@@ -14,6 +14,8 @@
         <nav class="navbar">
             <a href="adm.php">Home</a>
             <a href="users_table.php">Users</a>
+            <a href="courses_table.php">Courses</a>
+            <a href="gyms.php">Gyms</a>
             <a href="about.adm.php">About us</a>
             <a href="new_course.html">Add course</a>
             <a href="new_gym.html">Add gym</a>

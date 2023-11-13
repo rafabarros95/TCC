@@ -26,6 +26,7 @@ require_once("config.php");
                 <a href="about.adm.php">About us</a>
                 <a href="new_course.html">Add course</a>
                 <a href="new_gym.html">Add gym</a>
+                <a href="changes.php">Changes</a>
                 <a href="logout.php">Logout</a>
             </nav>
         </header>
@@ -39,6 +40,7 @@ require_once("config.php");
                 <th>Date_birth</th>
                 <th>Gender</th>
                 
+                
             </tr>
             
             <?php 
@@ -50,7 +52,7 @@ require_once("config.php");
 
                 if($result->num_rows>0){
                 while($row = $result->fetch_assoc()){
-                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["email"] . "<td>" . $row["phone_number"] . "<td>" . $row["date_birth"] . "<td>" . $row["gender"] . "</td></tr>";
+                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["email"] . "<td>" . $row["phone_number"] . "<td>" . $row["date_birth"] . "<td>" . $row["gender"] .  "</td></tr>";
                 }
                 
              }

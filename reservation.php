@@ -107,15 +107,7 @@ require_once("config.php");
             </tr>
           </tbody>
         </table>
-        <script>
-          function reservation(){
-            document.myform.action = '/reservation.php';
-            var gym = document.getElementById("gym");
-            
-          }
-        </script>
-          
-
+        
     </main>
 </body>
 </html>
