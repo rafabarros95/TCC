@@ -22,6 +22,29 @@
         font-size: 25px;
         color: #fff;
       }
+      main  a {
+        font-size: 30px;
+        font-weight: bold;
+        color: #07777E;
+        background-color: #fff;
+        text-decoration: none;
+        display: flex;
+        width: 200px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-600%);
+        outline: none;
+        margin-left: 6px;
+        padding-left: 14px;
+        
+        
+      }
+
+      main  a:hover {
+        background-color: #07777E;
+        color: #fff;
+      }
     </style>
 </head>
 <body>
