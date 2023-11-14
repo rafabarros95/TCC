@@ -10,10 +10,10 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            echo '<script> alert("Data deleted successfully."); </script>';
-            header("Location: changes-index.php"); 
+            echo "<script> alert('User deleted successfully.'); </script>";
+            echo '<script>window.location = "changes-index.php"</script>';
         } else {
-            echo '<script> alert("Data not deleted."); </script>';
+            echo "<script> alert('User not deleted.'); </script>";
         }
     }
 ?>

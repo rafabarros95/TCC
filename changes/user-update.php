@@ -110,14 +110,14 @@
                 $password = $_POST['password'];
                 $confirm_password = $_POST['confirm_password'];
 
-                $query = "UPDATE registration SET name='$name', email='$email', phone_number = '$phone_number', date_birth = '$date_birth', gender = '$gender', password = '$password', confirm_password = '$confirm_password', WHERE id = '$id' ";
+                $query = "UPDATE registration SET name='$name', email='$email', phone_number = '$phone_number', date_birth = '$date_birth', gender = '$gender', password = '$password', confirm_password = '$confirm_password' WHERE id = '$id' ";
                 $query_run = mysqli_query($conn, $query);
 
                 if($query_run){
-                    echo '<script> alert("Data updated successfully."); </script>';
-                    header("Location: ../changes/user-edit.php");
+                    echo "<script> alert('User Data updated successfully.'); </script>";
+                    echo '<script>window.location = "changes-index.php"</script>';
                 } else {
-                    echo '<script> alert("Data not updated."); </script>';
+                    echo "<script> alert('User Data not updated.'); </script>";
                     
                 }
            }
