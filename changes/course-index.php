@@ -9,7 +9,7 @@ require_once("../config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit gym</title>
+    <title>Edit course</title>
     <link rel="shortcut icon" href="../images/Favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/users_table.style.css">
@@ -76,7 +76,7 @@ require_once("../config.php");
          $conn = mysqli_connect("localhost", "root", "");
          $db = mysqli_select_db($conn, 'academia');
 
-         $query = "SELECT * FROM gym";
+         $query = "SELECT * FROM course";
          $query_run = mysqli_query($conn, $query);
         ?>
 
@@ -84,9 +84,13 @@ require_once("../config.php");
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>NAME-GYM</th>
-                    <th>ADDRESS</th>
-                    <th>MEMBERSHIP-TYPE</th>
+                    <th>NAME</th>
+                    <th>GYM</th>
+                    <th>DESCRIPTION</th>
+                    <th>VACANCIES</th>
+                    <th>PRICE €</th>
+                    <th>FROM</th>
+                    <th>TO</th>
                     <th>EDIT</th>
                     <th>DELETE</th>
                     
@@ -100,16 +104,20 @@ require_once("../config.php");
                         <tbody>
                             <tr>
                                 <th><?php echo $row['id']; ?></th>
-                                <th><?php echo $row['name_gym']; ?></th>
-                                <th><?php echo $row['address']; ?></th>
-                                <th><?php echo $row['membership_fee']; ?></th>
+                                <th><?php echo $row['name']; ?></th>
+                                <th><?php echo $row['gym']; ?></th>
+                                <th><?php echo $row['description']; ?></th>
+                                <th><?php echo $row['vacancies']; ?></th>
+                                <th><?php echo $row['price']; ?></th>
+                                <th><?php echo $row['time_from']; ?></th>
+                                <th><?php echo $row['time_to']; ?></th>
 
-                                <form action="gym-update.php" method="post">
+                                <form action="course-update.php" method="post">
                                     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                                     <th><input type="submit" id="edit" name="edit" value="Edit"></th>
                                 </form>
 
-                                <form action="gym-delete.php" method="post">
+                                <form action="course-delete.php" method="post">
                                     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                                     <th> <input type="submit" id="delete" name="delete" value="Delete"></th>
                                 </form>

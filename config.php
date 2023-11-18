@@ -2,4 +2,4 @@
 
 // Database connection bellow
 
-$conn = new mysqli("localhost","root","","sistema_academia");
+$conn = new mysqli("localhost","root","","academia");

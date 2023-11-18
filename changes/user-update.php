@@ -35,7 +35,7 @@
 <body>
     <?php 
     $conn = mysqli_connect("localhost", "root", "");
-    $db = mysqli_select_db($conn, 'sistema_academia');
+    $db = mysqli_select_db($conn, 'academia');
 
     $id = $_POST['id'];
 
@@ -75,17 +75,17 @@
                     <!-- Gender Fieldset radio -->
                     <fieldset>
                         <h3>Gender</h3>
-                        <div class="gender">
-                        <input type="radio" id="male" name="gender" value="<?php echo $row['gender']?>">
-                        <label for="male">Male</label>
+                          <div class="gender">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
                     
-                        <input type="radio" id="female" name="gender" value="<?php echo $row['gender']?>">
-                        <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
                     
-                        <input type="radio" id="diverse" name="gender" value="<?php echo $row['gender']?>">
-                        <label for="diverse">Diverse</label>
+                            <input type="radio" id="diverse" name="gender" value="diverse">
+                            <label for="diverse">Diverse</label>
 
-                        </div>
+                          </div>
                         </fieldset>
 
                         <div class="password">

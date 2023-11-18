@@ -1,7 +1,7 @@
 <?php 
 
     $host = "localhost";
-    $dbname = "sistema_academia";
+    $dbname = "academia";
     $username = "root";
     $password = "";
 

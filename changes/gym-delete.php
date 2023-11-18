@@ -1,7 +1,7 @@
 <?php 
 
     $conn = mysqli_connect("Localhost", "root", "");
-    $db = mysqli_select_db($conn, 'sistema_academia');
+    $db = mysqli_select_db($conn, 'academia');
 
     if(isset($_POST["delete"])){
         $id = $_POST["id"];

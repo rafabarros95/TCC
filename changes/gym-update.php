@@ -54,7 +54,7 @@
 <body>
     <?php 
     $conn = mysqli_connect("localhost", "root", "");
-    $db = mysqli_select_db($conn, 'sistema_academia');
+    $db = mysqli_select_db($conn, 'academia');
 
     $id = $_POST['id'];
 
@@ -92,12 +92,11 @@
                     <fieldset>
                         <h3>Membership Type</h3>
                         <div class="type">
-                            <input type="radio" id="monthly" name="type" class="membership" value="<?php echo $row['membership_fee']?>"/>
+                            <input type="radio" id="monthly" name="type"  value="monthly"/>
                             <label for="monthly">monthly - €25</label>
-                        </div>
+                        
 
-                        <div class="type">
-                            <input type="radio" id="yearly" name="type" class="membership" value="<?php echo $row['membership_fee']?>"/>
+                            <input type="radio" id="yearly" name="type"  value="yearly"/>
                             <label for="yearly">yearly - €250</label>
                         </div>
                     </fieldset>
@@ -108,9 +107,9 @@
            </form>
            <?php 
            if(isset($_POST['update'])){
-                $name_gym = $_POST['name_gym'];
+                $name_gym = $_POST['gym'];
                 $address = $_POST['address'];
-                $membership_fee = $_POST['membership_fee'];
+                $membership_fee = $_POST['type'];
 
                 $query = "UPDATE gym SET name_gym='$name_gym', address='$address', membership_fee = '$membership_fee' WHERE id = '$id' ";
                 $query_run = mysqli_query($conn, $query);
@@ -118,7 +117,7 @@
                 if($query_run){
                     echo "<script> alert('Gym updated successfully.'); </script>";
                     
-                    echo '<script>window.location = "changes-index.php"</script>';
+                    echo '<script>window.location = "gym-index.php"</script>';
                     
                 } else {
                     echo "<script> alert('Gym not updated. Try again!'); </script>";

@@ -74,7 +74,7 @@ require_once("../config.php");
     <main>
         <?php 
          $conn = mysqli_connect("localhost", "root", "");
-         $db = mysqli_select_db($conn, 'sistema_academia');
+         $db = mysqli_select_db($conn, 'academia');
 
          $query = "SELECT * FROM registration";
          $query_run = mysqli_query($conn, $query);

@@ -61,7 +61,7 @@
         <thead>
             <th><a href="changes/changes-index.php">Edit user</a></th>
             <th><a href="./changes/gym-index.php">Edit gym</a></th>
-            <th><a href="#">Edit course</a></th>
+            <th><a href="./changes/course-index.php">Edit course</a></th>
         </thead>
     </main>
     <aside>
