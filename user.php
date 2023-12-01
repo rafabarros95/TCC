@@ -38,6 +38,14 @@ $result = mysqli_query($conn,$query);
         td a:hover { 
             text-decoration: underline;
         }
+        /* welcome message */
+        main h1 {
+          border: 3px solid #07777E;
+          float: right;
+          margin-top: -160px;
+          font-size: 25px;
+          color: #fff;
+        }
         
     </style>
 
@@ -55,14 +63,14 @@ $result = mysqli_query($conn,$query);
         </nav>
     </header>
     <main>
-      
+     <h1>Welcome back.</h1> 
     <table>
     
                    <thead>
                      <tr>
                         <th>Id</th>
                         <th>Gym</th>
-                        <th>Name</th>
+                        <th>Course</th>
                         <th>From</th>
                         <th>To</th>
                         <th>Price(€)</th>
@@ -79,7 +87,7 @@ $result = mysqli_query($conn,$query);
                     ?>
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['gym'];?></td>
-                    <td><?php echo $row['name'];?></td>
+                    <td><?php echo $row['name_course'];?></td>
                     <td><?php echo $row['time_from'];?></td>
                     <td><?php echo $row['time_to'];?></td>
                     <td><?php echo $row['price'];?></td>
@@ -89,6 +97,7 @@ $result = mysqli_query($conn,$query);
 
                     </tr>  
                     
+                
                     <?php 
                         }
                     ?>

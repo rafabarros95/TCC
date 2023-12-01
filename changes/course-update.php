@@ -83,7 +83,7 @@
                 
                     <div class="name">
                         <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $row['name']?>" required>
+                        <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $row['name_course']?>" required>
                     </div>
                     <div class="name">
                         <label for="gym"></label>
@@ -125,7 +125,7 @@
            </form>
            <?php 
            if(isset($_POST['update'])){
-                $name = $_POST['name'];
+                $name_course = $_POST['name'];
                 $gym = $_POST['gym'];
                 $description = $_POST['description'];
                 $vacancies = $_POST['vacancies'];
@@ -133,7 +133,7 @@
                 $time_from = $_POST['time-from'];
                 $time_to = $_POST['time-to'];
 
-                $query = "UPDATE course SET name='$name', gym='$gym', description = '$description', vacancies = '$vacancies', price = '$price', time_from = '$time_from', time_to = '$time_to' WHERE id = '$id' ";
+                $query = "UPDATE course SET name_course='$name_course', gym='$gym', description = '$description', vacancies = '$vacancies', price = '$price', time_from = '$time_from', time_to = '$time_to' WHERE id = '$id' ";
                 $query_run = mysqli_query($conn, $query);
 
                 if($query_run){

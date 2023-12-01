@@ -52,12 +52,12 @@ require_once("config.php");
             if($conn->connect_error){
                 die ("Unable to connect to db");
              } else {
-                $sql = "SELECT `id`, `name`, `gym`, `time_from`, `time_to`, `price`, `vacancies` FROM `course`";  
+                $sql = "SELECT `id`, `name_course`, `gym`, `time_from`, `time_to`, `price`, `vacancies` FROM `course`";  
                 $result = $conn -> query($sql);
 
                 if($result->num_rows>0){
                 while($row = $result->fetch_assoc()){
-                    echo "<tr><td>". $row["id"] . "<td>" . $row["name"] . "<td>" . $row["gym"] . "<td>" . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["vacancies"]  . "</td></tr>";
+                    echo "<tr><td>". $row["id"] . "<td>" . $row["name_course"] . "<td>" . $row["gym"] . "<td>" . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["vacancies"]  . "</td></tr>";
                 }
                 
              }

@@ -28,7 +28,7 @@ require_once("config.php");
           margin-left: 16px;
         }
 
-        main form #email, #subject, #message, #gym, #name, #time_from, #time_to, #price {
+        main form #email, #subject, #message, #gym, #name, #time_from, #time_to, #price, #name_course {
           color: #07777E;
           border: none;
           outline: none;
@@ -106,7 +106,10 @@ require_once("config.php");
 
               
             <form action="send_email.php"  method="post">
-
+                
+                <label for="name_course"></label>
+                <input type="text" name="name_course" id="name_course" placeholder="name_course" value="<?php echo $row['name_course'] ?>"> <br><br>
+                
                 <label for="gym"></label>
                 <input type="text" name="gym" id="gym" placeholder="Gym" value="<?php echo $row['gym'] ?>"> <br><br>
 

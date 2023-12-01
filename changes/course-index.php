@@ -104,7 +104,7 @@ require_once("../config.php");
                         <tbody>
                             <tr>
                                 <th><?php echo $row['id']; ?></th>
-                                <th><?php echo $row['name']; ?></th>
+                                <th><?php echo $row['name_course']; ?></th>
                                 <th><?php echo $row['gym']; ?></th>
                                 <th><?php echo $row['description']; ?></th>
                                 <th><?php echo $row['vacancies']; ?></th>

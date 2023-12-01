@@ -9,7 +9,7 @@ require_once ("config.php");
     } else {
     
        /* Data from form submitted */
-       $name = $_POST['name'];
+       $name_course = $_POST['name'];
        $gym = $_POST['gym'];
        $description = $_POST['description'];
        $vacancies = $_POST['vacancies'];
@@ -17,7 +17,7 @@ require_once ("config.php");
        $time_from = $_POST['time-from'];
        $time_to = $_POST['time-to'];
 
-       $query = "INSERT INTO `course`( `name`,`gym`, `description`, `vacancies`,`price`, `time_from`, `time_to`) VALUES ('$name','$gym','$description','$vacancies','$price','$time_from','$time_to')";
+       $query = "INSERT INTO `course`( `name_course`,`gym`, `description`, `vacancies`,`price`, `time_from`, `time_to`) VALUES ('$name_course','$gym','$description','$vacancies','$price','$time_from','$time_to')";
 
        $result = mysqli_query($conn,$query);
 

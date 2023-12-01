@@ -1,6 +1,5 @@
 <?php 
 
-
 /* require_once("config.php");
 require("user.php");
 $query = "SELECT * FROM `course`";
@@ -19,12 +18,13 @@ require 'phpmailer/src/SMTP.php';
 
 
 if(isset($_POST["send"])){
+    
     $mail = new PHPMailer(true);
 
     $mail ->isSMTP();
     $mail -> Host = 'smtp.gmail.com';
     $mail -> SMTPAuth = true;
-    $mail -> Username = 'rafaelr.barros956789@gmail.com'; /* my email from gmail */
+    $mail -> Username = 'rafaelr.barros956789@gmail.com';  /*my email from gmail */
     $mail ->Password = 'qiwyxzjfnzzmovij'; /* gmail app password */
     $mail -> SMTPSecure = 'ssl';
     $mail -> Port = 465;
@@ -41,19 +41,22 @@ if(isset($_POST["send"])){
     $mail ->Subject = $_POST["time_from"];
     $mail ->Subject = $_POST["time_to"];
     $mail ->Subject = $_POST["gym"];
+    $mail ->Subject = $_POST["name_course"];
 
+    
+}
     /* Sending the details to the customer by email */
-
-    $mail ->Body = 'Your Reservation was confirmed. Mr/Mrs. ' .  $_POST["name"] .   ' your course  costs ' . $_POST["price"] . ' . It goes from ' . $_POST["time_from"] . ' to ' . $_POST["time_to"] . ' at ' . $_POST["gym"] . '.  Please make sure you are there 5 min earlier for the payment procedure. Thanks for using Flexfit. Come back soon :)';
+    
+    $mail ->Body = 'Your Reservation was confirmed. Mr/Mrs. ' .  $_POST["name"] .   ' your '.$_POST["name_course"].' course  costs ' . $_POST["price"] . ' . It goes from ' . $_POST["time_from"] . ' to ' . $_POST["time_to"] . ' at ' . $_POST["gym"] . '.  Please make sure you are there 5 min earlier for the payment procedure. Thanks for using Flexfit. Come back soon :)';
 
     $mail ->send();
  
     echo
     "
     <script>
-    alert('Email sent Sucessfully');
+    alert('Course booked sucessfully. Please Check your email ');
     document.location.href = 'user.php';
     </script>
-    ";
- }
+    "; 
+
 ?>

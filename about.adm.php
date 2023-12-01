@@ -19,6 +19,7 @@
             <a href="about.adm.php">About us</a>
             <a href="new_course.html">Add course</a>
             <a href="new_gym.html">Add gym</a>
+            <a href="changes.php">Changes</a>
             <a href="login.html">Logout</a>
         </nav>
     </header>
