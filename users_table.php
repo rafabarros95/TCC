@@ -20,6 +20,7 @@ require_once("config.php");
 
             <nav class="navbar">
                 <a href="adm.php">Home</a>
+                <a href="booking-table.php">Booking</a>
                 <a href="users_table.php">Users</a>
                 <a href="courses_table.php">Courses</a>
                 <a href="gyms.php">Gyms</a>
