@@ -53,3 +53,26 @@
             $conn ->close();
             ?>
         </table>
+
+       -> Code reservation.php <-
+
+       /*  if($conn->connect_error){
+                die ("Unable to connect to db");
+             } else {
+                $sql = "SELECT `name_course`, `gym`, `name_user`, `time_from`, `time_to`, `price`, `email` FROM `booking` WHERE email = '$logged'";  
+                $result = $conn -> query($sql);
+
+                if($result->num_rows>0){
+                while($row = $result->fetch_assoc()){
+                    echo "<tr><td>". $row["name_course"] . "<td>" . $row["gym"] . "<td>" . $row["name_user"] . "<td>" . $row["time_from"] . "<td>" . $row["time_to"] . "<td>" . $row["price"] . "<td>" . $row["email"]  . "</td></tr>";
+                }
+                
+             }
+             else {
+                echo "0 result";
+             }
+
+            }
+            $conn ->close(); */
+            ?>
+          <!-- </tbody> -->

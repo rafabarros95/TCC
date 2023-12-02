@@ -1,3 +1,19 @@
+
+<?php 
+  session_start();
+
+  if(!isset($_SESSION['email']) == true and (!isset($_SESSION['password']) == true))
+   {
+    
+    unset($_SESSION['email']);
+    unset($_SESSION['password']);
+    header('Location: login.html');
+    
+   } else{
+    $logged = $_SESSION['email'];
+   }
+?>
+
 <!--  Adm section -->
 
 <!DOCTYPE html>
@@ -40,9 +56,11 @@
         </nav>
     </header>
     <main>
-       <!-- consulting data from database -->
+
        <div class="welcome">
-         <h1>Welcome back, Rafael.</h1>
+         <?php 
+           echo "<h1>Welcome back, <br><u>$logged</u></h1>";
+         ?>
        </div>
     </main>
     <aside>

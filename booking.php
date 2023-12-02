@@ -1,5 +1,17 @@
 <?php 
+session_start();
+
 require_once("config.php");
+
+if(!isset($_SESSION['email']) == true and (!isset($_SESSION['password']) == true)) {
+    
+  unset($_SESSION['email']);
+  unset($_SESSION['password']);
+  header('Location: login.html');
+  
+  
+} 
+  $logged = $_SESSION['email'];
 
 ?>
 
@@ -93,7 +105,7 @@ require_once("config.php");
 
           <?php
           
-          $query = "SELECT * FROM `course`,`registration` WHERE usertype ='user'";
+          $query = "SELECT * FROM `course`,`registration` WHERE email ='$logged'";
 
           $result = mysqli_query($conn, $query);
 

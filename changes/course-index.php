@@ -48,7 +48,7 @@ require_once("../config.php");
              outline: none;
              color: #fff; 
              font-size: 18px;
-            padding: 4px 2px; 
+             padding: 4px 2px; 
              background-color: red;
         }
 

@@ -1,4 +1,20 @@
 
+<?php 
+  session_start();
+
+  if(!isset($_SESSION['email']) == true and (!isset($_SESSION['password']) == true)) {
+    
+    unset($_SESSION['email']);
+    unset($_SESSION['password']);
+    header('Location: login.html');
+    
+    
+  } 
+    $logged = $_SESSION['email'];
+
+?>
+
+
 <!-- user section -->
 
 <?php 
@@ -63,7 +79,11 @@ $result = mysqli_query($conn,$query);
         </nav>
     </header>
     <main>
-     <h1>Welcome back.</h1> 
+     <div class="welcome">
+         <?php 
+           echo "<h1>Welcome back, <br><u>$logged</u></h1>";
+         ?>
+     </div>
     <table>
     
                    <thead>

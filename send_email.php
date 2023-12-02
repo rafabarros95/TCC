@@ -15,8 +15,61 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
+/* Here starts the process of storaging the data from the form into a table booking for retrieve booking */
+
+require __DIR__ . "/database.php";
+
+$sql = "INSERT INTO booking (name_course, gym, name_user, time_from, time_to, price, email) VALUES (?, ?, ?, ?, ?, ?, ?) ";
+
+$stmt = $mysqli -> stmt_init();
+
+if( ! $stmt -> prepare($sql)) {
+    die("SQL error: " . $mysqli->error);
+}
+
+$stmt -> bind_param("sssssss", 
+$_POST["name_course"],
+$_POST["gym"],
+$_POST["name"],
+$_POST["time_from"],
+$_POST["time_to"],
+$_POST["price"],
+$_POST["email"]);
+
+if ($stmt -> execute()) {
+    
+        header("Location: booking-success.html");
+        exit();
+    } else {
+        if($mysqli ->errno == 1062) {
+            die("email already taken");
+        } else {
+            die($mysqli -> error . " " . $mysqli ->errno);
+        }
+    }
+
+    /* echo
+    "
+    <script>
+    alert('Course booked sucessfully. Please Check your email ');
+    document.location.href = 'user.php';
+    </script>
+    ";
+    header("Location: booking.php"); */
+    
+  
+    
+    if($mysqli ->errno == 1062) {
+        die("email already taken");
+    } else {
+        die($mysqli -> error . " " . $mysqli ->errno);
+    }
 
 
+/* Here ends the process of storaging the data from the form into a table booking for retrieve booking */
+
+/* sending email to user for booking confirmation
+ */
 if(isset($_POST["send"])){
     
     $mail = new PHPMailer(true);
@@ -51,12 +104,6 @@ if(isset($_POST["send"])){
 
     $mail ->send();
  
-    echo
-    "
-    <script>
-    alert('Course booked sucessfully. Please Check your email ');
-    document.location.href = 'user.php';
-    </script>
-    "; 
+     
 
 ?>
