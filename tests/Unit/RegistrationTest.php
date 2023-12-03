@@ -14,7 +14,7 @@ class RegistrationTest extends TestCase {
             $register -> registration();
 
             /* use assertives to make sure if the registration passed */
-            $result = $register->registration();
+            $result = $register->registration("pedro", "pedro@gmx.de","014356783","04/08/1968", "male", "pedro123", "user");
 
             $this->assertTrue($result);
         }
