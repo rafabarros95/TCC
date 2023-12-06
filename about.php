@@ -12,10 +12,11 @@
         <a href="#" class="logo"><span>Flex</span>Fit</a>
 
         <nav class="navbar">
-            <a href="main.html">Home</a>
-            <a href="about.php ">About us</a>
-            <a href="registration.html">Sign up</a>
-            <a href="login.html">Login</a>
+            <a href="user.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="booking.php">Booking</a>
+            <a href="reservation.php">My Reservation</a>
+            <a href="logout.php">Logout</a>
         </nav>
     </header>
     <main>

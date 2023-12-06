@@ -3,7 +3,7 @@
 require_once("config.php");
 $course = $_POST['search'];
 
-$query = "SELECT * FROM `course` WHERE name='$course'";
+$query = "SELECT * FROM `course` WHERE name_course='$course'";
 $result = mysqli_query($conn,$query);
 
 ?>
@@ -66,7 +66,7 @@ $result = mysqli_query($conn,$query);
                     ?>
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['gym'];?></td>
-                    <td><?php echo $row['name'];?></td>
+                    <td><?php echo $row['name_course'];?></td>
                     <td><?php echo $row['time_from'];?></td>
                     <td><?php echo $row['time_to'];?></td>
                     <td><?php echo $row['price'];?></td>

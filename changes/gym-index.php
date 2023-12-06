@@ -14,6 +14,11 @@ require_once("../config.php");
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/users_table.style.css">
     <style>
+        body  .header {
+            position:inherit;
+      
+        }
+        
         table thead th {
             background-color: #07777E;
         } 
@@ -67,8 +72,7 @@ require_once("../config.php");
 
         <nav class="navbar">
             <a href="../adm.php">Home</a>
-            
-            
+            <a href="../changes.php">Back</a>    
         </nav>
     </header>
     <main>

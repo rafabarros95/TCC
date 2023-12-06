@@ -60,7 +60,7 @@
 
        <div class="welcome">
          <?php 
-           echo "<h1>Welcome back, <br><u>$logged</u></h1>";
+           echo "<h1>Welcome back, Adm. <br><u>$logged</u></h1>";
          ?>
        </div>
     </main>

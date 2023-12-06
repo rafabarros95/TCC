@@ -94,7 +94,7 @@ if(!isset($_SESSION['email']) == true and (!isset($_SESSION['password']) == true
 
         <nav class="navbar">
             <a href="user.php">Home</a>
-            <a href="about.php">About</a>
+            <a href="about.user.php">About</a>
             <a href="booking.php">Booking</a>
             <a href="reservation.php">My Reservation</a>
             <a href="logout.php">Logout</a>
